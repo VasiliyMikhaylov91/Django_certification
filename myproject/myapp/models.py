@@ -19,7 +19,7 @@ class Item(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     count = models.IntegerField()
     create_date = models.DateField(auto_now_add=True)
-    image = models.ImageField(upload_to='media/', default='')
+    image = models.ImageField(upload_to='media/', default='./image.jpg')
 
     def __str__(self):
         return f'Item: {self.name}, prise: {self.price}, count: {self.count}'
